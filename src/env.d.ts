@@ -1,7 +1,6 @@
 /// <reference types="astro/client" />
 
 declare interface Link {
-  desc: string;
+  title: string;
   link: string;
-  icon: string;
 }

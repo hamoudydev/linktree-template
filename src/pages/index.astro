@@ -4,28 +4,34 @@ import Card from "../components/card.astro";
 // Put all your links here
 const links: Link[] = [
   {
-    title: "💻 Login", // The text that will be rendered
+    title: "Login", // The text that will be rendered
     link: "login.soneknet.com", // The link
+    icon: "fa-solid fa-home", // An icon from Font Awesome: https://fontawesome.com/search?o=r&m=free
   },
   {
-    title: "⬆️ Server Status",
+    title: "Server Status",
     link: "stats.uptimerobot.com/BjAVJFDmEA",
+    icon: "fa-solid fa-lightbulb",
   },
   {
-    title: "📰 Read More",
+    title: "Read More",
     link: "read.soneknet.com/",
+    icon: "fa-solid fa-newspaper",
   },
   {
-    title: "🧰 IT Tools",
+    title: "IT Tools",
     link: "tools.soneknet.com/",
+    icon: "fa-solid fa-wrench",
   },
   {
-    title: "🎁 Wishlist",
+    title: "Wishlist",
     link: "newegg.io/a529e64",
+    icon: "fa-solid fa-gift",
   },
   {
-    title: "💵 Donate",
+    title: "Donate",
     link: "ko-fi.com/soneknet",
+    icon: "fa-solid fa-donate",
   },
 ];
 ---
@@ -64,8 +70,8 @@ const links: Link[] = [
       <img class="mx-auto" src="logo.png" alt="" />
       <div class="grid lg:grid-cols-2 gap-4 lg:max-w-[50vw] mx-auto">
         {
-          links.map(({ title, link }) => {
-            return <Card {title} {link} />;
+          links.map(({ title, link, icon }) => {
+            return <Card {title} {link} {icon} />;
           })
         }
       </div>
